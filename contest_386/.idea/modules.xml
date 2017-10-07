@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/contest_386.iml" filepath="$PROJECT_DIR$/contest_386.iml" />
+      <module fileurl="file://$PROJECT_DIR$/warm_up_lexicographical_numbers.iml" filepath="$PROJECT_DIR$/warm_up_lexicographical_numbers.iml" />
     </modules>
   </component>
 </project>

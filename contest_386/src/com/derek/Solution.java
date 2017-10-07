@@ -12,27 +12,18 @@ public class Solution {
         final int digits = 1 + (int)Math.floor(Math.log10(n));
         println("digits:" + digits);
         List<Integer> result = new ArrayList<>(n);
-
-
-
-
-        // l: leading digit, d: digit length
-        for (int l = 1; l <= Math.min(9, n); l++) {
-            for (int d = 1; d <= digits; d++) {
-
-            }
-
-            calculateLeadingDigit(n, l, result);
-        }
+        calculateLeadingDigit(n, 1, result);
         return result;
     }
 
-    public void calculateLeadingDigit(int max, int startingDigit, List<Integer> result) {
-        println("calculateLeadingDigit:" + startingDigit);
-        result.add(startingDigit);
-    }
-    public void calculateLeadingDigit(int maxNumber, int maxDigitLength, int startingDigit, int currentDigitLength, List<Integer> result) {
-        println("calculateLeadingDigit:" + startingDigit);
-        result.add(startingDigit);
+    public void calculateLeadingDigit(int n, int cur, List<Integer> result) {
+        println("calculateLeadingDigit:" + cur);
+        if (cur > n) return;
+        result.add(cur);
+
+        for (int i = 0; i < 9; i++) {
+            if (cur * 10 + i > n) return;
+            calculateLeadingDigit(n, cur * 10 + i, result);
+        }
     }
 }
